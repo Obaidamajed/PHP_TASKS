@@ -74,6 +74,30 @@ $color = ["red", "green","white"];
   echo "<br>";
   echo "<br>";
   
+  echo"<h2>7</h2>";
+  $temp = [78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76, 73, 68, 62, 73, 72, 65, 74, 62, 62, 65, 64, 68, 73, 75, 79, 73];
+  function accum($item , $def){
+   return $def + $item;
+  }
+  $total_temp = array_reduce($temp, "accum", 0);
+  $avg = $total_temp/count($temp);
+  echo 'Average Temperature is: ' . $avg;
+  echo '<br>';
+  sort($temp);
+  echo 'List of five lowest temperatures: ';
+  for ($i=0;$i<=4;$i++){
+      echo $temp[$i] . ' ,';
+  };
+  echo '<br>';
+  echo 'List of five lowest temperatures: ';
+  for ($i=count($temp)-5 ; $i<=count($temp)-1 ; $i++ ){
+      echo $temp[$i] . ' ,';
+  };
+
+  echo "<br><br> #########################################";
+  echo "<br>";
+  echo "<br>";
+
   echo"<h2>8</h2>";
   $array1 = array("color" => "red", 2, 4);
   $array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
