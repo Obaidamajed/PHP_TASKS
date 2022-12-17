@@ -85,6 +85,72 @@ echo "</pre>";
 echo "----------------------------";
 echo "<br>";
 echo "<h2>Functions</h2>";
+function IsPrime($n)
+{
+  for($x=2; $x<$n; $x++)
+  {
+    if($n % $x == 0)
+    {
+      return 0;
+    }
+  }
+  return 1;
+}
+$a = IsPrime(3);
+if ($a==0)
+echo 'This is not a Prime Number.....';
+else
+echo 'This is a Prime Number..';
+echo "<br>";
+echo "----------------------------";
+echo "<br>";
+$string = "remove";  
+echo "Reverse string of $string is " .strrev ( $string ); 
+echo "<br>";
+echo "----------------------------";
+echo "<br>";
+$x = 12;
+$y = 10;
+
+// Swap Logic
+
+echo "The numbers before swapping is:";
+echo " x =".$x." and y=".$y;
+echo "<br>";
+
+$swap = $x;
+$x = $y; // x = 10
+$y = $swap; // y = 12
+
+echo "The numbers after swapping is: ";
+echo " x =".$x." and y=".$y;
+echo "<br>";
+echo "----------------------------";
+echo "<br>";
+$num = 407;  
+$total = 0;  
+$x = $num;  
+while($x != 0)  
+{  
+  $rem = $x % 10;  
+  $total = $total+$rem*$rem*$rem;  
+  $x = $x/10;  
+}  
+if($num == $total)  
+{  
+  echo "Yes it is an Armstrong number";  
+}  
+else  
+{  
+  echo "No it is not an armstrong number";  
+}  
+echo "<br>";
+echo "----------------------------";
+echo "<br>";
+$array = array(2, 4, 7, 4, 8, 4);
+$array = array_unique($array);
+print_r($array);
+
 
 
 
